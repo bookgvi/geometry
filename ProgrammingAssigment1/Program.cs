@@ -60,8 +60,11 @@ namespace ConsoleApp2
             double angle = Math.Atan(delta2 / delta1);
             // Convert to degrees
             angle = angle * 180 / Math.PI;
-            //if (angle < 0)
-            // angle = 180 + angle;
+
+            // Check negative angle
+            if (angle < 0)
+              angle = 180 + angle;
+
             Console.WriteLine("The angle is equal to " + Math.Round(angle, 3) + " degrees");
             Console.WriteLine();
         }
